@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FcViewPager">
+        <attr name="auto_scroll" format="boolean"/>
+        <attr name="scroll_period" format="integer"/><!--seconds-->
+        <attr name="off_screen_limit" format="integer"/><!--setOffscreenPageLimit-->
+        <attr name="margin_left_right" format="dimension"/>
+        <attr name="infinite_scroll" format="boolean"/>
+        <attr name="page_margin" format="dimension"/>
+        <attr name="transformer_type" format="enum">
+            <enum name="AlphaTransformer" value="0"/>
+            <enum name="ScaleTransformer" value="1"/>
+        </attr>
+    </declare-styleable>
+</resources>

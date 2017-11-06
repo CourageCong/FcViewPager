@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/activity_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff000"
+    android:clipChildren="false"
+    android:orientation="vertical"
+    tools:context="com.fc.viewpageranim.MainActivity">
+
+
+    <!--  <android.support.v4.view.ViewPager
+          android:id="@+id/viewpager"
+          android:layout_width="match_parent"
+          android:layout_height="150dp"
+          android:layout_marginLeft="30dp"
+          android:layout_marginRight="30dp"
+          android:clipChildren="false"/>-->
+    <com.fc.scrollviewpagel.widget.FcViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:auto_scroll="true"
+        app:scroll_period="4"
+        app:margin_left_right="30dp"
+        app:page_margin="10dp"
+        app:transformer_type="ScaleTransformer"
+        app:off_screen_limit="2"
+    ></com.fc.scrollviewpagel.widget.FcViewPager>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="start"
+        android:text="start"
+    />
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="stop"
+        android:text="stop"
+    />
+
+</LinearLayout>
