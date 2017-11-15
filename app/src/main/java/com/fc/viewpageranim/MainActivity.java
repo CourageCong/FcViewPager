@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private List<Integer> imgIds;
     private LinearLayout mLinearLayout;
     private Timer mTimer;
-    private ImageView mImageViewl;
+    private ImageView mImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
