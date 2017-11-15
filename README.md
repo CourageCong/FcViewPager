@@ -1,0 +1,2 @@
+# FcViewPager
+简单配置实现自动无限轮播，可选择切换动画效果的ViewPager
