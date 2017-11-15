@@ -24,12 +24,12 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         app:auto_scroll="true"
-        app:scroll_period="4"
         app:margin_left_right="30dp"
-        app:page_margin="10dp"
-        app:transformer_type="ScaleTransformer"
         app:off_screen_limit="2"
-    ></com.fc.scrollviewpagel.widget.FcViewPager>
+        app:page_margin="10dp"
+        app:scroll_period="4"
+        app:transformer_type="ScaleTransformer"
+    />
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
@@ -43,6 +43,15 @@
         android:layout_height="wrap_content"
         android:onClick="stop"
         android:text="stop"
+    />
+    <com.fc.scrollviewpagel.widget.MatrixPolyToPoly
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <ImageView
+    android:layout_height="100dp"
+    android:layout_width="200dp"
+    android:id="@+id/img"
+    android:src="@drawable/b9"
     />
 
 </LinearLayout>

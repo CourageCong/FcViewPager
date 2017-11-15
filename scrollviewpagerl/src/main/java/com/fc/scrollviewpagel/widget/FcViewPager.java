@@ -99,14 +99,21 @@ public class FcViewPager extends FrameLayout {
      * 初始化参数
      */
     private void initArray(Context context, AttributeSet attrs) {
-        TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.FcViewPager);
-        autoScroll = array.getBoolean(R.styleable.FcViewPager_auto_scroll, false);
-        scrollPeriod = array.getInt(R.styleable.FcViewPager_scroll_period, DEFAUT_SCROLL_PERIOD);
-        marginLR = (int) array.getDimension(R.styleable.FcViewPager_margin_left_right, 0);
-        offScreenLimit = array.getInt(R.styleable.FcViewPager_off_screen_limit, 1);
-        infiniteScroll = array.getBoolean(R.styleable.FcViewPager_infinite_scroll, false);
-        pageMargin = (int) array.getDimension(R.styleable.FcViewPager_page_margin, 0);
-        transformerType = array.getInt(R.styleable.FcViewPager_transformer_type, -1);
+        TypedArray array = null;
+        try {
+            array = context.obtainStyledAttributes(attrs, R.styleable.FcViewPager);
+            autoScroll = array.getBoolean(R.styleable.FcViewPager_auto_scroll, false);
+            scrollPeriod = array.getInt(R.styleable.FcViewPager_scroll_period, DEFAUT_SCROLL_PERIOD);
+            marginLR = (int) array.getDimension(R.styleable.FcViewPager_margin_left_right, 0);
+            offScreenLimit = array.getInt(R.styleable.FcViewPager_off_screen_limit, 1);
+            infiniteScroll = array.getBoolean(R.styleable.FcViewPager_infinite_scroll, false);
+            pageMargin = (int) array.getDimension(R.styleable.FcViewPager_page_margin, 0);
+            transformerType = array.getInt(R.styleable.FcViewPager_transformer_type, -1);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            array.recycle();
+        }
 
     }
 
